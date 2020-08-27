@@ -28,22 +28,25 @@
             <i class="fas fa-volume-down"></i>
             <span class="status-bar__battery-level">100%</span>
             <i class="fas fa-battery-full"></i>
-            <span>(목) 오전 1:00</span>
+            <span class="js-clock">
+                <span>00:00</span>
+            </span>
+
         </div>
     </div>
-    <div class="icon-computer text-center" id="icon-computer" ondblclick="opencom()">
-        <img src="./img/Terminal.png" class="img-responsive"">
+    <div class="icon-computer text-center" id="icon-computer" ondblclick="location.href='';">
+        <img src="./img/Terminal.png" class="img-responsive">
         <p>Terminal</p>
     </div>
-    <div class=" icon-computer text-center" id="icon-computer" ondblclick="opencom()">
+    <div class=" icon-computer text-center" id="icon-computer" ondblclick="location.href='';">
         <img src="./img/folder.png" class="img-responsive"">
         <p>Folder</p>
     </div>
-    <div class=" icon-computer text-center" id="icon-computer" ondblclick="opencom()">
+    <div class=" icon-computer text-center" id="icon-computer" ondblclick="location.href='';">
         <img src="./img/finder.png" class="img-responsive"">
         <p>Finder</p>
     </div>
-    <div class=" icon-computer text-center" id="icon-computer" ondblclick="opencom()">
+    <div class=" icon-computer text-center" id="icon-computer" ondblclick="location.href='';">
         <img src="./img/trash.png" class="img-responsive"">
         <p>Trash</p>
     </div>
@@ -117,9 +120,18 @@
             </ul>
         </div>
     </div>
+
+
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
     <script src="./script.js"></script>
+    <script src="./clock.js"></script>
+
+    <script>
+        function dbl_click(href) {
+            location.href = href;
+        }
+    </script>
 </body>
 
 </html>
