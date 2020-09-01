@@ -3,123 +3,28 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>main</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my site</title>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
     <script src="https://kit.fontawesome.com/27b2ad561b.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="/style.css">
 
+    <script type="text/javascript">
+        $(function () {
+            $('.btn_show').click(function () {
+                $('.btn_word').show();
+            });
+            $('.btn_hide').click(function () {
+                $('.btn_word').hide();
+            });
+        });
+    </script>
 </head>
 
 <body>
-    <div class="header">
-        <div class="status__bar">
-            <i class="fab fa-apple"></i>
-            <span>Finder</span>
-            <span>파일</span>
-            <span>편집</span>
-            <span>보기</span>
-            <span>이동</span>
-            <span>윈도우</span>
-            <span>도움말</span>
-        </div>
-        <div class="status__bar__2">
-            <i class="fas fa-comment"></i>
-            <i class="fas fa-wifi"></i>
-            <i class="fas fa-volume-down"></i>
-            <span class="status-bar__battery-level">100%</span>
-            <i class="fas fa-battery-full"></i>
-            <span class="js-clock">
-                <span>00:00</span>
-            </span>
-
-        </div>
-    </div>
-    <div class="icon-computer text-center" id="icon-computer" ondblclick="location.href='';">
-        <img src="./img/Terminal.png" class="img-responsive">
-        <p>Terminal</p>
-    </div>
-    <div class="icon-computer folder-computer" id="folder-computer" ondblclick="location.href='';">
-        <img src="./img/folder.png" class="img-responsive"">
-        <p>Folder</p>
-    </div>
-    <div class=" icon-computer text-center" id="icon-computer" ondblclick="location.href='';">
-        <img src="./img/finder.png" class="img-responsive"">
-        <p>Finder</p>
-    </div>
-    <div class=" icon-computer text-center" id="icon-computer" ondblclick="location.href='';">
-        <img src="./img/trash.png" class="img-responsive"">
-        <p>Trash</p>
-    </div>
-    <!-- <div class=" icon">
-        <button type="button" id="icon" class="icon">
-            <img src="./img/Terminal.png" alt="Terminal">
-            <p>터미널</p>
-        </button>
-        <button type="button" id="icon" class="icon">
-            <img src="./img/folder.png" alt="folder">
-            <p>폴더</p>
-        </button>
-        <button type="button" id="icon" class="icon">
-            <img src="./img/finder.png" alt="finder">
-            <p>Finder</p>
-        </button>
-        <button type="button" id="icon" class="icon">
-            <img src="./img/trash.png" alt="trash">
-            <p>휴지통</p>
-        </button>
-    </div> -->
-    <div id="container">
-        <div id="dock">
-            <ul>
-                <li>
-                    <span>Chrome</span>
-                    <a href="#"><img src="./img/dock/chrome.png" alt="chrome">
-                    </a>
-                </li>
-                <li>
-                    <span>App_Store</span>
-                    <a href="#"><img src="./img/dock/app_store.png" alt="app_store">
-                    </a>
-                </li>
-                <li>
-                    <span>ITerm</span>
-                    <a href="#"><img src="./img/dock/iterm.png" alt="iterm">
-                    </a>
-                </li>
-                <li>
-                    <span>KaKaoTalk</span>
-                    <a href="#"><img src="./img/dock/kakaotalk.png" alt="kakao">
-                        <div class="badge">+999</div>
-                    </a>
-                </li>
-                <li>
-                    <span>Notion</span>
-                    <a href="#"><img src="./img/dock/notion.png" alt="notion">
-                    </a>
-                </li>
-                <li>
-                    <span>VSCDOE</span>
-                    <a href="#"><img src="./img/dock/vscode.png" alt="vscode">
-                    </a>
-                </li>
-                <li>
-                    <span>Git</span>
-                    <a href="#"><img src="./img/dock/git.png" alt="git">
-                    </a>
-                </li>
-                <li>
-                    <span>NETFLIX</span>
-                    <a href="#"><img src="./img/dock/netflix.png" alt="netflix">
-                    </a>
-                </li>
-                <li>
-                    <span>Trash</span>
-                    <a href="#"><img src="./img/trash.png" alt="trash">
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
+    <button class="btn_show" style="padding:3px">show</button>
+    <button class="btn_hide" style="padding:3px">hide</button>
+    <div class="btn_word">Hello world!!!</div>
 
     <div class="overlay-computer" id="overlay-computer">
         <div class="fluid-container">
@@ -134,7 +39,7 @@
                     <i class="fa fa-window-minimize" onclick="closeopencom()"></i>
                     <i class="fa fa-window-restore" onclick="returncom()" id="returncam" style="display:none;"></i>
                     <i class="fa fa-window-maximize" onclick="upercom()" id="upercam"></i>
-                    <i class="fa fa-times closeButton" onclick="closecom()" id="closeercam"></i>
+                    <i class="fa fa-times" onclick="closecom()"></i>
                 </div>
                 <div class="clearfix"></div>
             </div>
@@ -313,8 +218,7 @@
                             <span>Portfolio</span>
                         </div>
                         <div class="col-xs-2 folders text-center" ondblclick="window.open('https://www.google.com')">
-                            <p class="contain"><img src="./img/dock/git.png" class="img-responsive  center-block"
-                                    alt=""></p>
+                            <p class="contain"><img src="./img/git.png" class="img-responsive  center-block" alt=""></p>
                             <span>Github</span>
                         </div>
                         <div class="col-xs-2 folders text-center" ondblclick="window.open('https://www.google.com')">
@@ -540,7 +444,20 @@
             </div>
         </div>
 
-
+        <div class="note-overlay" id="note-overlay">
+            <div class="fluid-container">
+                <div class="first-row-note">
+                    <span class="center-text head-over">My Note</span>
+                    <div class="right">
+                        <i class="fa fa-times" onclick="closenote()"></i>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="second-row-note">
+                    <textarea></textarea>
+                </div>
+            </div>
+        </div>
 
 
         <div class="about-overlay" id="about-overlay">
@@ -1007,17 +924,11 @@
         </footer>
 
     </div>
-
+    <!-- partial -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
     <script src="./script.js"></script>
-    <script src="./clock.js"></script>
 
-    <script>
-        function dbl_click(href) {
-            location.href = href;
-        }
-    </script>
 </body>
 
 </html>
