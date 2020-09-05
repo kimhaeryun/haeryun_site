@@ -3,14 +3,17 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>main</title>
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link rel='stylesheet'
+        href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css?after'>
+    <link rel="icon" type="image/png" href="http://example.com/myicon.png">
     <script src="https://kit.fontawesome.com/27b2ad561b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style.css">
 
 </head>
 
-<body>
+<body onload="typewriter();">
     <div class="header">
         <div class="status__bar">
             <i class="fab fa-apple"></i>
@@ -34,7 +37,7 @@
 
         </div>
     </div>
-    <div class="icon-computer text-center" id="icon-computer" ondblclick="location.href='';">
+    <div class="icon-computer terminal-computer" id="icon-computer" ondblclick="location.href='';">
         <img src="./img/Terminal.png" class="img-responsive">
         <p>Terminal</p>
     </div>
@@ -120,7 +123,20 @@
             </ul>
         </div>
     </div>
+    <!-- terminal 페이지 -->
+    <div class="wrapper">
+        <div class="terminal">
+            <div class="terminal__head">
+                <div class="head__circle head__circle--close"> </div>
+                <div class="head__circle head__circle--turn"> </div>
+                <div class="head__circle head__circle--expand"></div>
+            </div>
+            <div class="terminal__text" id="typedtext"></div>
+        </div>
+    </div>
+    <!-- terminal 페이지 -->
 
+    <!-- Folder 페이지 -->
     <div class="overlay-computer" id="overlay-computer">
         <div class="fluid-container">
             <div class="first-row-win" id="first-row-win">
@@ -341,157 +357,6 @@
                             <p class="contain"><img src="./img/folder.png" class="img-responsive  center-block"
                                     style="height: 64px;" alt=""></p>
                             <span>직박구리</span>
-                            <!-- </div>
-                        <div class="col-xs-2 folders text-center">
-                            <p class="contain"><img
-                                    src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg"
-                                    class="img-responsive  center-block" style="height: 64px;" alt=""></p>
-                            <span>Folder</span>
-                        </div>
-                        <div class="col-xs-2 folders text-center">
-                            <p class="contain"><img
-                                    src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg"
-                                    class="img-responsive  center-block" style="height: 64px;" alt=""></p>
-                            <span>Folder</span>
-                        </div>
-                        <div class="col-xs-2 folders text-center">
-                            <p class="contain"><img
-                                    src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg"
-                                    class="img-responsive  center-block" style="height: 64px;" alt=""></p>
-                            <span>Folder</span>
-                        </div>
-                        <div class="col-xs-2 folders text-center">
-                            <p class="contain"><img
-                                    src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg"
-                                    class="img-responsive  center-block" style="height: 64px;" alt=""></p>
-                            <span>Folder</span>
-                        </div>
-                        <div class="col-xs-2 folders text-center">
-                            <p class="contain"><img
-                                    src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg"
-                                    class="img-responsive  center-block" style="height: 64px;" alt=""></p>
-                            <span>Folder</span>
-                        </div>
-                        <div class="col-xs-2 folders text-center">
-                            <p class="contain"><img
-                                    src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg"
-                                    class="img-responsive  center-block" style="height: 64px;" alt=""></p>
-                            <span>Folder</span>
-                        </div>
-                        <div class="col-xs-2 folders text-center">
-                            <p class="contain"><img
-                                    src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg"
-                                    class="img-responsive  center-block" style="height: 64px;" alt=""></p>
-                            <span>Folder</span>
-                        </div>
-                        <div class="col-xs-2 folders text-center">
-                            <p class="contain"><img
-                                    src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg"
-                                    class="img-responsive  center-block" style="height: 64px;" alt=""></p>
-                            <span>Folder</span>
-                        </div>
-                        <div class="col-xs-2 folders text-center">
-                            <p class="contain"><img
-                                    src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg"
-                                    class="img-responsive  center-block" style="height: 64px;" alt=""></p>
-                            <span>Folder</span>
-                        </div>
-                        <div class="col-xs-2 folders text-center">
-                            <p class="contain"><img
-                                    src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg"
-                                    class="img-responsive  center-block" style="height: 64px;" alt=""></p>
-                            <span>Folder</span>
-                        </div>
-                        <div class="col-xs-2 folders text-center">
-                            <p class="contain"><img
-                                    src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg"
-                                    class="img-responsive  center-block" style="height: 64px;" alt=""></p>
-                            <span>Folder</span>
-                        </div>
-                        <div class="col-xs-2 folders text-center">
-                            <p class="contain"><img
-                                    src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg"
-                                    class="img-responsive  center-block" style="height: 64px;" alt=""></p>
-                            <span>Folder</span>
-                        </div>
-                        <div class="col-xs-2 folders text-center">
-                            <p class="contain"><img
-                                    src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg"
-                                    class="img-responsive  center-block" style="height: 64px;" alt=""></p>
-                            <span>Folder</span>
-                        </div>
-                        <div class="col-xs-2 folders text-center">
-                            <p class="contain"><img
-                                    src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg"
-                                    class="img-responsive  center-block" style="height: 64px;" alt=""></p>
-                            <span>Folder</span>
-                        </div>
-                        <div class="col-xs-2 folders text-center">
-                            <p class="contain"><img
-                                    src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg"
-                                    class="img-responsive  center-block" style="height: 64px;" alt=""></p>
-                            <span>Folder</span>
-                        </div>
-                        <div class="col-xs-2 folders text-center">
-                            <p class="contain"><img
-                                    src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg"
-                                    class="img-responsive  center-block" style="height: 64px;" alt=""></p>
-                            <span>Folder</span>
-                        </div>
-                        <div class="col-xs-2 folders text-center">
-                            <p class="contain"><img
-                                    src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg"
-                                    class="img-responsive  center-block" style="height: 64px;" alt=""></p>
-                            <span>Folder</span>
-                        </div>
-                        <div class="col-xs-2 folders text-center">
-                            <p class="contain"><img
-                                    src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg"
-                                    class="img-responsive  center-block" style="height: 64px;" alt=""></p>
-                            <span>Folder</span>
-                        </div>
-                        <div class="col-xs-2 folders text-center">
-                            <p class="contain"><img
-                                    src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg"
-                                    class="img-responsive  center-block" style="height: 64px;" alt=""></p>
-                            <span>Folder</span>
-                        </div>
-                        <div class="col-xs-2 folders text-center">
-                            <p class="contain"><img
-                                    src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg"
-                                    class="img-responsive  center-block" style="height: 64px;" alt=""></p>
-                            <span>Folder</span>
-                        </div>
-                        <div class="col-xs-2 folders text-center">
-                            <p class="contain"><img
-                                    src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg"
-                                    class="img-responsive  center-block" style="height: 64px;" alt=""></p>
-                            <span>Folder</span>
-                        </div>
-                        <div class="col-xs-2 folders text-center">
-                            <p class="contain"><img
-                                    src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg"
-                                    class="img-responsive  center-block" style="height: 64px;" alt=""></p>
-                            <span>Folder</span>
-                        </div>
-                        <div class="col-xs-2 folders text-center">
-                            <p class="contain"><img
-                                    src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg"
-                                    class="img-responsive  center-block" style="height: 64px;" alt=""></p>
-                            <span>Folder</span>
-                        </div>
-                        <div class="col-xs-2 folders text-center">
-                            <p class="contain"><img
-                                    src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg"
-                                    class="img-responsive  center-block" style="height: 64px;" alt=""></p>
-                            <span>Folder</span>
-                        </div>
-                        <div class="col-xs-2 folders text-center">
-                            <p class="contain"><img
-                                    src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg"
-                                    class="img-responsive  center-block" style="height: 64px;" alt=""></p>
-                            <span>Folder</span>
-                        </div> -->
                             <div class="clearfix"></div>
                         </div>
                     </div>
@@ -526,51 +391,8 @@
                     </div>
                     <div class="clearfix"></div>
                 </div>
-                <div class="second-row-vid">
-                    <!--<video class="center-block" width="" height="" controls>
-                            <source src="img/myExplain_2.mp4" type="video/mp4">
-                            <source src="img/myExplain_2.ogg" type="video/ogg">
-                            Your browser does not support the video tag.
-                    </video>-->
-                    <!-- <div style="position:relative;height:0;padding-bottom:56.25%;"><iframe
-                        src="https://www.youtube.com/embed/VUPtvK28fhY?ecver=2"
-                        style="position:absolute;width: 50%;height: 50vh;left: 25%;" width="640" height="360"
-                        frameborder="0" allowfullscreen></iframe></div> -->
-                </div>
             </div>
         </div>
-
-
-
-
-        <div class="about-overlay" id="about-overlay">
-            <div class="fluid-container">
-                <div class="first-row-img">
-                    <span class="center-text head-over">Info about me</span>
-                    <div class="right">
-                        <i class="fa fa-times" onclick="closeabout()"></i>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="second-row-abo">
-                    <div>
-                        <img src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500503802/admin-2_qxjnab.jpg"
-                            class="img-responsive" alt="">
-                        <p>
-                            Hi, My name is Mohamed Yahya From Egypt :( . <br> I'am 17 Years old. <br> I'am a Programmer
-                            web (Front End). <br> My Number: 20+ <mark>01061578345</mark>. <br> And you can Call Me From
-                            <a href="https://goo.gl/B56o1U">Here</a> <br> I love computer, technology and programming
-                            <br> I was learning programming languages. <br> The best language for me is JavaScript. <br>
-                            I use Javascript instead of jQuery. <br> That's why I'm strong in Javascript.
-                            <br> The most loved thing in programming is often the challenge. <br> I am capable of Html,
-                            Html 5, Css, Css3, Javascript <br> Thanks for your time <br>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
         <div class="start-window-fade hidden-start" id="start-window-fade"></div>
         <div class="start-window hidden-start" id="start-window">
             <div class="fluid-container" id="container-start">
@@ -592,411 +414,6 @@
                             <i class="fa fa-bars fa-1x"></i>
                         </div>
                     </div>
-                    <div class="col-xs-3 second-column">
-                        <div class="wrap-scroll">
-                            <div class="head-med">
-                                <small>What I'am Used</small>
-                            </div>
-                            <div class="media">
-                                <div class="media-left">
-                                    <a href="#">
-                                        <img class="media-object"
-                                            src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500503397/HTML_Logo_jkkttu.png"
-                                            width="35" height="35" alt="...">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <small class="media-heading">Html, Html 5</small>
-                                </div>
-                            </div>
-                            <div class="media">
-                                <div class="media-left">
-                                    <a href="#">
-                                        <img class="media-object"
-                                            src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500503385/8b61de4c84033266e15317a6eb9fda2d-css3_cmaqgi.png"
-                                            width="35" height="35" alt="...">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <small class="media-heading">Css, Css 3</small>
-                                </div>
-                            </div>
-                            <div class="media">
-                                <div class="media-left">
-                                    <a href="#">
-                                        <img class="media-object"
-                                            src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500503920/Javascript-shield_grysg1.png"
-                                            width="35" height="35" alt="...">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <small class="media-heading">Pure JavaScript</small>
-                                </div>
-                            </div>
-                            <div class="media">
-                                <div class="media-left">
-                                    <a href="#">
-                                        <img class="media-object"
-                                            src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500503388/bootstrap-4_qmy2lh.svg"
-                                            width="35" height="35" alt="...">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <small class="media-heading">Bootstrap</small>
-                                </div>
-                            </div>
-                            <div class="head-med mouse-prient">
-                                <small>Expand <i class="fa fa-chevron-down fa-1x"></i></small>
-                            </div>
-                            <div class="head-med">
-                                <small>Tools used</small>
-                            </div>
-                            <div class="media">
-                                <div class="media-left">
-                                    <a href="#">
-                                        <img class="media-object"
-                                            src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500504015/winicon_mj7eiz.png"
-                                            width="35" height="35" alt="...">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <small class="media-heading">Windows 10</small>
-                                </div>
-                            </div>
-                            <div class="media">
-                                <div class="media-left">
-                                    <a href="#">
-                                        <img class="media-object"
-                                            src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500504055/Firefox_ivwjwz.png"
-                                            width="35" height="35" alt="...">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <small class="media-heading">Firefox</small>
-                                </div>
-                            </div>
-                            <div class="media">
-                                <div class="media-left">
-                                    <a href="#">
-                                        <img class="media-object"
-                                            src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500503390/chrome1600_okfqm6.png"
-                                            width="35" height="35" alt="...">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <small class="media-heading">chrome</small>
-                                </div>
-                            </div>
-                            <div class="media">
-                                <div class="media-left">
-                                    <a href="#">
-                                        <img class="media-object"
-                                            src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500504144/favicon_mmggme.ico"
-                                            width="35" height="35" alt="...">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <small class="media-heading">Visual Studio Code</small>
-                                </div>
-                            </div>
-                            <div class="media">
-                                <div class="media-left">
-                                    <a href="#">
-                                        <img class="media-object"
-                                            src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500504181/Photoshop_CC_icon_gyvgzg.png"
-                                            width="35" height="35" alt="...">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <small class="media-heading">Photoshop cc 2017</small>
-                                </div>
-                            </div>
-                            <div class="media">
-                                <div class="media-left">
-                                    <a href="#">
-                                        <img class="media-object"
-                                            src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500504215/illustrator_qgskie.png"
-                                            width="35" height="35" alt="...">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <small class="media-heading">illustrator cc 2017</small>
-                                </div>
-                            </div>
-                            <div class="media">
-                                <div class="media-left">
-                                    <a href="#">
-                                        <img class="media-object"
-                                            src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500503401/github-desktop-icon_zzzpbq.png"
-                                            width="35" height="35" alt="...">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <small class="media-heading">github</small>
-                                </div>
-                            </div>
-                            <div class="media">
-                                <div class="media-left">
-                                    <a href="#">
-                                        <img class="media-object"
-                                            src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500504321/codepen1600_rd1mh7.png"
-                                            width="35" height="35" alt="...">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <small class="media-heading">Codepen</small>
-                                </div>
-                            </div>
-                            <div class="media">
-                                <div class="media-left">
-                                    <a href="#">
-                                        <img class="media-object"
-                                            src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500503387/BeSJ3aet_400x400_hg4g6p.png"
-                                            width="35" height="35" alt="...">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <small class="media-heading">Upwork</small>
-                                </div>
-                            </div>
-
-
-
-                        </div>
-                    </div>
-                    <div class="col-xs-4 third-column">
-                        <div class="head-box">
-                            <small>Life at a glance</small>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-8 col-xs-push-4 box">
-                                <div class="box-style">
-                                    <div class="icon-bottom text-center" style="margin: 20px;">
-                                        <i class="fa fa-envelope fa-2x"></i>
-                                    </div>
-                                    <div>
-                                        Mail
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 col-xs-pull-8 box">
-                                <div class="box-style text-center">
-                                    <div class="mycontainer">
-                                        <div id="day">day</div>
-                                        <div id="number-day">number</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xs-8 box">
-                                <div class="box-style">
-                                    <div class="icon-bottom text-center" style="margin: 20px;">
-                                        <i class="fa fa-internet-explorer fa-2x"></i>
-                                    </div>
-                                    <div>
-                                        Microsoft Edge
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 box">
-                                <div class="box-style">
-                                    <div class="icon-bottom text-center" style="margin: 20px;">
-                                        <i class="fa fa-picture-o fa-2x"></i>
-                                    </div>
-                                    <div>
-                                        Picture
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 box">
-                                <div class="box-style">
-                                    <div class="icon-bottom text-center" style="margin: 20px;">
-                                        <i class="fa fa-sun-o fa-2x"></i>
-                                    </div>
-                                    <div>
-                                        Weather
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 box">
-                                <div class="box-style">
-                                    <div class="icon-bottom text-center" style="margin: 20px;">
-                                        <i class="fa fa-laptop fa-2x"></i>
-                                    </div>
-                                    <div>
-                                        User
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 box">
-                                <div class="box-style"
-                                    style="background:url('http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500503397/admin_uo6a4w.jpg');background-size: cover;">
-                                    <div class="icon-bottom text-center" style="margin: 20px;">
-                                        <i class="fa fa-twitter fa-2x" style="color: rgba(0,0,0,0);"></i>
-                                    </div>
-                                    <div>
-                                        twitter <i class="fa fa-twitter" style="float: right;line-height: 21px;"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 box">
-                                <div class="box-style">
-                                    <div class="icon-bottom text-center" style="margin: 20px;">
-                                        <i class="fa fa-shopping-bag  fa-2x"></i>
-                                    </div>
-                                    <div>
-                                        store
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 box">
-                                <div class="box-style">
-                                    <div class="icon-bottom text-center" style="margin: 20px;">
-                                        <i class="fa fa-skype  fa-2x"></i>
-                                    </div>
-                                    <div>
-                                        skype
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 box">
-                                <div class="box-style text-center"
-                                    style="background:url('http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500504440/king-care_ccxidf.jpg');background-size: cover;background-position: center;">
-                                    <div class="icon-bottom text-center" style="margin: 20px;">
-                                        <i class="fa fa-twitter fa-2x" style="color: rgba(0,0,0,0);"></i>
-                                    </div>
-                                    <div style="font-size: 10px;">
-                                        Candy Crush
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-4">
-                        <div class="head-box">
-                            <small>Play And Explore</small>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-4 box">
-                                <div class="box-style"
-                                    style="background:url('http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500504485/logo_jgngah.png');background-size: cover;background-position: center;">
-                                    <div class="icon-bottom text-center" style="margin: 20px;">
-                                        <i class="fa fa-twitter fa-2x" style="color: rgba(0,0,0,0);"></i>
-                                    </div>
-                                    <div style="font-size: 10px;">
-                                        Xbox
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 box">
-                                <div class="box-style">
-                                    <div class="icon-bottom text-center" style="margin: 20px;">
-                                        <i class="fa fa-music fa-2x"></i>
-                                    </div>
-                                    <div style="font-size: 10px;">
-                                        Music
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 box">
-                                <div class="box-style">
-                                    <div class="icon-bottom text-center" style="margin: 20px;">
-                                        <i class="fa fa-film fa-2x"></i>
-                                    </div>
-                                    <div style="font-size: 10px;">
-                                        Film
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 box">
-                                <div class="box-style"
-                                    style="background:url('http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500504540/microsoft-solitaire-collection-02-535x535_bactpx.png');background-size: cover;background-position: center;">
-                                    <div class="icon-bottom text-center" style="margin: 20px;">
-                                        <i class="fa fa-twitter fa-2x" style="color: rgba(0,0,0,0);"></i>
-                                    </div>
-                                    <div style="font-size: 10px;">
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 box">
-                                <div class="box-style"
-                                    style="background:url('http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500504576/1200x630bb_juslti.jpg');background-size: cover;background-position: center;">
-                                    <div class="icon-bottom text-center" style="margin: 20px;">
-                                        <i class="fa fa-twitter fa-2x" style="color: rgba(0,0,0,0);"></i>
-                                    </div>
-                                    <div style="font-size: 10px;">
-                                        minecraft
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 box">
-                                <div class="box-style"
-                                    style="background:url('http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500504589/shortcut-icon-180-393c2144_lifwjy.png');background-size: cover;background-position: center;">
-                                    <div class="icon-bottom text-center" style="margin: 20px;">
-                                        <i class="fa fa-twitter fa-2x" style="color: rgba(0,0,0,0);"></i>
-                                    </div>
-                                    <div style="font-size: 10px;">
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xs-8 col-xs-push-4 box">
-                                <div class="box-style"
-                                    style="background:url('http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500503395/bank_cf8dgr.jpg');background-size: 130%;background-position: center;">
-                                    <div class="icon-bottom text-center" style="margin: 20px;">
-                                        <i class="fa fa-twitter fa-2x" style="color: rgba(0,0,0,0);"></i>
-                                    </div>
-                                    <div>
-                                        News
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 col-xs-pull-8 box">
-                                <div class="box-style"
-                                    style="background:url('http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500504662/maxresdefault_live_bwb3qd.jpg');background-size: cover;background-position: center;">
-                                    <div class="icon-bottom text-center" style="margin: 20px;">
-                                        <i class="fa fa-twitter fa-2x" style="color: rgba(0,0,0,0);"></i>
-                                    </div>
-                                    <div>
-                                        Money
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 box">
-                                <div class="box-style"
-                                    style="background:url('http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500504684/unnamed_is6kxn.png');background-size: cover;background-position: center;">
-                                    <div class="icon-bottom text-center" style="margin: 20px;">
-                                        <i class="fa fa-twitter fa-2x" style="color: rgba(0,0,0,0);"></i>
-                                    </div>
-                                    <div style="font-size: 10px;">
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 box">
-                                <div class="box-style"
-                                    style="background:url('http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500503787/onenote-amazon-app-store-100361701-large_m6lbsu.jpg');background-size: cover;background-position: center;">
-                                    <div class="icon-bottom text-center" style="margin: 20px;">
-                                        <i class="fa fa-twitter fa-2x" style="color: rgba(0,0,0,0);"></i>
-                                    </div>
-                                    <div style="font-size:12px;">
-                                        OneNote
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 box">
-                                <div class="box-style"
-                                    style="background:url('http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500504701/office2016logo_uw8zcd.png');background-size: cover;background-position: center;">
-                                    <div class="icon-bottom text-center" style="margin: 20px;">
-                                        <i class="fa fa-twitter fa-2x" style="color: rgba(0,0,0,0);"></i>
-                                    </div>
-                                    <div style="font-size:10px;">
-                                        Office
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -1007,9 +424,12 @@
         </footer>
 
     </div>
+    <!-- Folder 페이지 -->
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
     <script src="./script.js"></script>
     <script src="./clock.js"></script>
 
